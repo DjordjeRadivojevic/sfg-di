@@ -7,7 +7,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan(basePackages = {"com.springframework.services","com.springframework.sfgdi"})
+//@ComponentScan(basePackages = {"com.springframework.sfgdi.services","com.springframework.sfgdi"})
 public class SfgDiApplication {
 
     public static void main(String[] args) {

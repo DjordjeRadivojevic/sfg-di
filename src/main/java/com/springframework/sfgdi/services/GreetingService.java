@@ -1,4 +1,4 @@
-package com.springframework.services;
+package com.springframework.sfgdi.services;
 
 public interface GreetingService {
 
