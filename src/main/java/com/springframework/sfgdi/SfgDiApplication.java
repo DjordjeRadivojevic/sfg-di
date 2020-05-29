@@ -1,6 +1,8 @@
 package com.springframework.sfgdi;
 
 import com.springframework.sfgdi.controllers.*;
+import com.springframework.sfgdi.examplebeans.FakeDataSource;
+import com.springframework.sfgdi.examplebeans.FakeJmsBroker;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -36,6 +38,12 @@ public class SfgDiApplication {
         System.out.println("---------Constructor");
         ConstructorInjectorController constructorInjectorController = (ConstructorInjectorController)ctx.getBean("constructorInjectorController");
         System.out.println(constructorInjectorController.getGreeting());
+
+     FakeDataSource fakeDataSource = (FakeDataSource)ctx.getBean(FakeDataSource.class);
+     System.out.println(fakeDataSource.getUser());
+
+     FakeJmsBroker fakeJmsBroker = (FakeJmsBroker)ctx.getBean(FakeJmsBroker.class);
+     System.out.println(fakeJmsBroker.getUser());
     }
 
 }
